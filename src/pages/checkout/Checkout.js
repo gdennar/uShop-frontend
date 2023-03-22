@@ -30,8 +30,9 @@ const Checkout = () => {
 
 	const description = `uShop payment: email: ${customerEmail}, amount:${cartTotalAmount}`;
 	//"http://localhost:4242/create-payment-intent"
+	// "https://ushop.onrender.com/create-payment-intent"
 	useEffect(() => {
-		fetch("https://ushop.onrender.com/create-payment-intent", {
+		fetch("https://ushop-commerce.onrender.com/create-payment-intent", {
 			method: "POST",
 			headers: { "Content-Type": "application/json" },
 			body: JSON.stringify({
