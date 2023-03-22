@@ -84,7 +84,7 @@ const CheckoutForm = () => {
 			.confirmPayment({
 				elements,
 				confirmParams: {
-					return_url: "http://localhost:3000/checkout-success",
+					return_url: "https://ushop-api.onrender.com/checkout-success",
 				},
 				redirect: "if_required",
 			})
