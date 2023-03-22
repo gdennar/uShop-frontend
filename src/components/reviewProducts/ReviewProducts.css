@@ -1,0 +1,42 @@
+.review .card {
+	width: 100%;
+	max-width: 800px;
+	padding: 1rem;
+}
+
+.review-section {
+	margin-bottom: 6rem;
+}
+
+.review form {
+	text-align: left;
+}
+
+.review form label {
+	display: block;
+	font-size: 1.2rem;
+	font-weight: 500;
+}
+
+.review form input[type="text"],
+.review form input[type="number"],
+.review form input[type="file"],
+.review form input[type="email"],
+.review form select,
+.review form input[type="password"] {
+	display: block;
+	font-size: 1rem;
+	font-weight: 300;
+	padding: 1rem;
+	margin: 1rem auto;
+	width: 100%;
+	border: 1px solid #777;
+	border-radius: 3px;
+	outline: none;
+}
+
+@media only screen and (max-width: 888px) {
+	.review .card {
+		max-width: 500px;
+	}
+}

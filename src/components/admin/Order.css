@@ -1,0 +1,51 @@
+.order-history-table {
+	padding: 5px;
+	width: 100%;
+	overflow-x: auto;
+	margin-bottom: 3rem;
+}
+
+.order-history-table table {
+	border-collapse: collapse;
+	width: 100%;
+	font-size: 1rem;
+}
+
+.order-history-table table thead {
+	border-top: 2px solid lightblue;
+	border-bottom: 2px solid lightblue;
+}
+
+.order-history-table table th {
+	border: 1px solid #eee;
+}
+
+.order-history-table table th,
+.order-history-table table td {
+	vertical-align: top;
+	text-align: left;
+	padding: 8px;
+}
+
+.order-history-table table th.icons > *,
+.order-history-table table td.icons > * {
+	margin-right: 5px;
+	cursor: pointer;
+}
+
+.order-history-table table tr {
+	border-bottom: 1px solid #ccc;
+	cursor: pointer;
+}
+
+.order-history-table table tr:nth-child(even) {
+	background-color: #eee;
+}
+.order-pending {
+	color: orangered;
+	font-weight: 500;
+}
+.order-delivered {
+	color: green;
+	font-weight: 500;
+}

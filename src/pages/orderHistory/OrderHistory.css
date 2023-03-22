@@ -1,0 +1,47 @@
+.order-history-table {
+	padding: 5px;
+	width: 100%;
+	overflow-x: auto;
+}
+.table table {
+	border-collapse: collapse;
+	width: 100%;
+	font-size: 1rem;
+}
+.table table thead {
+	border-top: 2px solid lightblue;
+	border-bottom: 2px solid lightblue;
+}
+
+.table table thead th {
+	border: 1px solid #eee;
+}
+
+.table table thead th,
+.table table tbody td {
+	vertical-align: top;
+	text-align: left;
+	padding: 8px;
+}
+.table table thead th,
+.table table tbody td .order-icons > * {
+	margin-right: 5px;
+	cursor: pointer;
+}
+
+.order-history-table tr {
+	border-bottom: 1px solid #ccc;
+	cursor: pointer;
+}
+
+.order-history-table tr:nth-child(even) {
+	background-color: #eee;
+}
+.order-pending {
+	color: orangered;
+	font-weight: 500;
+}
+.order-delivered {
+	color: green;
+	font-weight: 500;
+}

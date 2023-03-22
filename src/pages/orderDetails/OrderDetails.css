@@ -1,0 +1,47 @@
+/* .table {
+	padding: 5px;
+	width: 100%;
+	overflow-x: auto;
+} */
+
+.table p {
+	margin: 5px;
+}
+th.icons > *,
+td.icons > * {
+	margin-right: 5px;
+	cursor: pointer;
+}
+
+.summary {
+	margin-top: 2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+.card {
+	padding: 1rem;
+}
+.card .text {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.card h3 {
+	color: orangered;
+}
+
+button {
+	margin-top: 5px;
+}
+
+.count {
+	display: flex;
+	align-items: center;
+}
+.count button {
+	border: 1px solid var(--darkblue);
+}
+.count button > * {
+	margin-right: 1rem;
+}

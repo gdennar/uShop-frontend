@@ -1,0 +1,89 @@
+.contact {
+	margin-bottom: 7rem;
+}
+
+.contact .contact-sections {
+	display: flex;
+}
+.contact .card {
+	padding: 1rem;
+	border: 1px solid #ccc;
+}
+
+.contact .card2 {
+	padding: 2rem;
+	background-color: rgb(48, 143, 174);
+	color: #fff;
+}
+.contact .card2 h3,
+.contact .card2 p {
+	color: #fff;
+}
+.contact .card2 .icons {
+	margin: 0;
+}
+.contact .card2 .icons span {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-bottom: 1rem;
+	color: #fff;
+}
+.contact .card2 .icons span a,
+.contact .card2 .icons span p {
+	margin: 0 0 0 5px;
+}
+
+.contact .section {
+	display: flex;
+	align-items: flex-start;
+}
+
+.contact .section form {
+	width: 500px;
+	max-width: 100%;
+	margin-right: 1rem;
+	margin-bottom: 1rem;
+}
+
+.contact .section form label {
+	display: flex;
+	font-size: 1rem;
+	font-weight: 500;
+	padding-left: 0.7rem;
+}
+
+.contact .section form input[type="text"],
+.contact .section form input[type="number"],
+.contact .section form input[type="file"],
+.contact .section form input[type="email"],
+.contact .section form select,
+.contact .section form textarea,
+.contact .section form input[type="password"] {
+	display: block;
+	font-size: 1rem;
+	font-weight: 300;
+	padding: 0.7rem;
+	margin: 0.6rem auto;
+	width: 90%;
+	border: 1px solid #777;
+	border-radius: 3px;
+	outline: none;
+}
+
+.contact .contact-sections .details h3 {
+	font-weight: 300;
+	font-size: 2rem;
+	margin: 0;
+}
+
+@media screen and (max-width: 859px) {
+	.contact .contact-sections {
+		flex-direction: column;
+	}
+
+	.contact .card2 {
+		width: 50%;
+		min-width: 350px;
+	}
+}

@@ -1,0 +1,12 @@
+.admin-chart {
+	width: 100%;
+	margin: 5rem 0 3rem 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.admin-chart .card {
+	padding: 1rem;
+	border: 1px solid #ccc;
+	border-bottom: 3px solid lightblue;
+}

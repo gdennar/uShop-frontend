@@ -1,0 +1,42 @@
+.admin-order-table {
+	padding: 5px;
+	width: 100%;
+	overflow-x: auto;
+	margin-bottom: 3rem;
+}
+
+.admin-order-table table {
+	border-collapse: collapse;
+	width: 100%;
+	font-size: 1rem;
+}
+
+.admin-order-table table thead {
+	border-top: 2px solid lightblue;
+	border-bottom: 2px solid lightblue;
+}
+
+.admin-order-table table th {
+	border: 1px solid #eee;
+}
+
+.admin-order-table table th,
+.admin-order-table table td {
+	vertical-align: top;
+	text-align: left;
+	padding: 8px;
+}
+
+.admin-order-table table th.icons > *,
+.admin-order-table table td.icons > * {
+	margin-right: 5px;
+	cursor: pointer;
+}
+
+.admin-order-table table tr {
+	border-bottom: 1px solid #ccc;
+}
+
+.admin-order-table table tr:nth-child(even) {
+	background-color: #eee;
+}
