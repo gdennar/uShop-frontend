@@ -9,14 +9,20 @@
 	padding: 1rem;
 }
 
+.payment-checkout {
+	margin-bottom: 3rem;
+}
+
 .payment-checkout h3 {
-	font-weight: 400;
+	font-weight: 500;
+	text-decoration: underline;
 }
 
 .payment-checkout form {
 	width: 100%;
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
+	justify-content: center;
 }
 
 label {
