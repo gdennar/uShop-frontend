@@ -56,14 +56,16 @@ const Slider = () => {
 						{index === currentSlide && (
 							<>
 								<img src={image} alt="Images" />
-								<div className="slider-content">
-									<h2>{heading}</h2>
-									<p>{desc}</p>
-									<hr />
+								<div className="slider-content-container">
+									<div className="slider-content">
+										<h2>{heading}</h2>
+										<p>{desc}</p>
+										<hr />
 
-									<Link className="btn-btn" to="/product">
-										Shop Now
-									</Link>
+										<Link className="btn-btn" to="/product">
+											Shop Now
+										</Link>
+									</div>
 								</div>
 							</>
 						)}
