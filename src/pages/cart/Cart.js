@@ -128,7 +128,7 @@ const Cart = () => {
 								Clear Cart
 							</Button>
 
-							<div className="checkout">
+							<div className="cart-checkout">
 								<div>
 									<Link to="/#products">&larr; Continue shopping</Link>
 								</div>

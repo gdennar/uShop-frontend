@@ -84,3 +84,13 @@ button {
 .cart-image {
 	width: 100px;
 }
+
+@media screen and (max-width: 742px) {
+	.cart-summary {
+		display: block;
+	}
+
+	.cart-checkout {
+		margin: 2rem auto;
+	}
+}

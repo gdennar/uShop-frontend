@@ -10,7 +10,7 @@
 	width: 500px;
 	padding: 0 20px;
 }
-.checkout h3 {
+.checkout h4 {
 	font-size: 2rem;
 	color: rgba(4, 20, 42, 0.937);
 }
@@ -51,22 +51,10 @@ select,
 }
 
 .checkout-summary {
-	margin-top: 4rem;
+	margin-top: 5.5rem;
 	width: 40%;
 	padding: 2rem;
 }
-
-@media screen and (max-width: 700px) {
-	.checkout form {
-		flex-direction: column;
-	}
-	.checkout form div {
-		width: 100%;
-		justify-content: center;
-	}
-}
-
-/* Payment Element styles */
 
 #payment-message {
 	color: rgb(105, 115, 134);
@@ -106,4 +94,41 @@ select,
 .button:disabled {
 	opacity: 0.5;
 	cursor: default;
+}
+
+@media screen and (max-width: 742px) {
+	.checkout h4 {
+		display: none;
+	}
+
+	.checkout {
+		margin: auto;
+		width: 100%;
+		padding: 0;
+	}
+
+	.checkout-summary {
+		margin-top: 2rem;
+		margin-bottom: 3rem;
+		width: 100%;
+		padding: 0;
+	}
+
+	.checkout form div {
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 0;
+	}
+	.checkout-section {
+		flex-direction: column-reverse;
+	}
+
+	.checkout {
+		margin-bottom: 7rem;
+	}
+
+	.card.checkout {
+		margin-top: 2rem;
+	}
 }

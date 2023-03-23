@@ -44,7 +44,7 @@ const CheckoutDetails = () => {
 			<Container>
 				<div className="checkout-section">
 					<div className="checkout">
-						<h3>Checkout Details</h3>
+						<h4>Checkout Details</h4>
 
 						<form onSubmit={handleSubmit}>
 							<Card className="card">
@@ -110,7 +110,7 @@ const CheckoutDetails = () => {
 								</div>
 							</Card>
 							{/* BILLING ADDRESS */}
-							<Card className="card">
+							<Card className="card checkout">
 								<h3>Billing Address</h3>
 								<div className="checkout-form-group">
 									<div className="input-field">
