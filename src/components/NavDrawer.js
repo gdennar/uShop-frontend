@@ -7,6 +7,7 @@ import "./NavDrawer.css";
 
 const NavDrawer = () => {
 	const [showNav, setShowNav] = useState(false);
+
 	return (
 		<>
 			<Drawer open={showNav} onClose={() => setShowNav(false)}>

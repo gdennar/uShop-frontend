@@ -30,7 +30,7 @@
 	}
 
 	.slider {
-		height: 50vh;
+		height: 60vh;
 	}
 }
 
@@ -40,7 +40,6 @@
 
 .slider-content {
 	position: absolute;
-	top: 20%;
 	left: 50%;
 	opacity: 0;
 	width: 50%;
