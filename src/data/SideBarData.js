@@ -24,7 +24,7 @@ export const sidebarData = [
 	{
 		id: 5,
 		text: "My Orders",
-		path: "/orders",
+		path: "/order-history",
 	},
 	{
 		id: 6,

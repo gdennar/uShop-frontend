@@ -40,7 +40,7 @@ const CheckoutSummary = () => {
 										<p>Unit Price: {`$${price.toFixed(2)}`}</p>
 										<p>
 											Total Product Price:
-											{`₦${cartQuantity * price}`}
+											{`$${cartQuantity * price}`}
 										</p>
 									</Card>
 								);
