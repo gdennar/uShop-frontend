@@ -139,7 +139,7 @@ const Cart = () => {
 									</p>
 									<div className="cart-text">
 										<h3>Subtotal: </h3>
-										<h3>{`₦${cartTotalAmount.toLocaleString()}`}</h3>
+										<h3>{`$${cartTotalAmount.toLocaleString()}`}</h3>
 									</div>
 									<p>Tax and shipping calculated at checkout</p>
 									<Button
