@@ -33,12 +33,13 @@
 	border-bottom: 3px solid #fff;
 }
 
-/* .active {
-	position: relative;
-	color: orangered;
+.hActive {
+	color: #ffb700;
+	text-decoration: none;
+	margin-left: 5px;
 }
 
-.active::after {
+/* .hActive::after {
 	content: "";
 	position: absolute;
 	left: 0;

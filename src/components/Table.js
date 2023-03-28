@@ -60,7 +60,7 @@ export default function Tables(props) {
 								{product.category}
 							</StyledTableCell>
 							<StyledTableCell align="center">
-								&#8358;{` ${product.price}`}
+								${` ${product.price}`}
 							</StyledTableCell>
 							<StyledTableCell align="center">
 								<Link to={`/admin/add-product/${product.id}`}>

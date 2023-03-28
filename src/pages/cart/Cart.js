@@ -51,7 +51,7 @@ const Cart = () => {
 	};
 
 	return (
-		<section>
+		<section className="cart-section">
 			<div className="container cart-table">
 				<h3>Shopping Cart</h3>
 				{cartItems.length === 0 ? (

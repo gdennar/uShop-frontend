@@ -23,9 +23,6 @@ import NavDrawer from "./NavDrawer";
 import { AdminLink } from "./adminRoute/AdminRoute";
 import { cartAction } from "../store/CartSlice";
 
-// const navStyle = ({ isActive }) =>
-// 	isActive ? `${classes.navActive}` : `${classes..navLink}`;
-
 function Header() {
 	const [displayUName, setDisplayUName] = useState("");
 	const [scrollPage, setScrollPage] = useState(false);
@@ -37,6 +34,9 @@ function Header() {
 	const cartTotalQuantity = useSelector(
 		(state) => state.cart.cartTotalQuantity
 	);
+
+	const navStyle = ({ isActive }) =>
+		isActive ? classes.hActive : classes.navLink;
 
 	const dispatch = useDispatch();
 
@@ -127,13 +127,13 @@ function Header() {
 											Admin
 										</Button>
 									</AdminLink>
-									<NavLink to="/" className={classes.navLink}>
+									<NavLink to="/" className={navStyle} end>
 										<p className="nav-text">Home</p>
 									</NavLink>
-									<NavLink to="#products" className={classes.navLink}>
+									{/* <NavLink to="#products" className={navStyle}>
 										<p className="nav-text">Products</p>
-									</NavLink>
-									<NavLink to="contact" className={classes.navLink}>
+									</NavLink> */}
+									<NavLink to="contact" className={navStyle}>
 										<p className="nav-text">Contact Us</p>
 									</NavLink>
 								</Box>
@@ -141,7 +141,7 @@ function Header() {
 								{/* Right hand Menu */}
 								<Box sx={{ flexGrow: 0, display: "flex", marginLeft: "auto" }}>
 									{isUserLoggedIn ? (
-										<NavLink to="" className={classes.navLink}>
+										<NavLink to="" className={navStyle}>
 											<p className="nav-text">
 												HI,
 												<span>{displayUName}</span>
@@ -151,11 +151,11 @@ function Header() {
 										""
 									)}
 									{isUserLoggedIn && (
-										<NavLink to="/order-history" className={classes.navLink}>
+										<NavLink to="/order-history" className={navStyle}>
 											<p>My Orders</p>
 										</NavLink>
 									)}
-									<NavLink to="/cart" className={classes.navLink}>
+									<NavLink to="/cart" className={navStyle}>
 										<p>
 											<ShoppingCartIcon />
 											<span className={classes.cartQuantity}>
@@ -164,7 +164,7 @@ function Header() {
 										</p>
 									</NavLink>
 									{!isUserLoggedIn && (
-										<NavLink to="/login" className={classes.navLink}>
+										<NavLink to="/login" className={navStyle}>
 											<p>LOGIN</p>
 										</NavLink>
 									)}

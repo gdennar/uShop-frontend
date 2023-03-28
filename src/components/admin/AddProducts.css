@@ -1,6 +1,6 @@
 .main-content {
 	overflow-y: scroll;
-	margin-bottom: 20px;
+	margin-bottom: 4rem;
 }
 .main-content::-webkit-scrollbar {
 	display: none;
