@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import "./ProductList.css";
 import GridViewIcon from "@mui/icons-material/GridView";
 import ViewListIcon from "@mui/icons-material/ViewList";
 import { useDispatch, useSelector } from "react-redux";
 import ProductItem from "./ProductItem";
 import { filterAction } from "../../store/filterSlice";
 import Pagination from "../Pagination";
+import classes from "./ProductList.module.css";
 
 const ProductList = () => {
   const [grid, setGrid] = useState(true);
@@ -32,16 +32,16 @@ const ProductList = () => {
   }, [dispatch, products, sort]);
 
   return (
-    <section className="product-list" id="products">
-      <div className="product-top">
-        <div className="product-list-icons">
+    <section className={classes.productList} id="products">
+      <div className={classes.productTop}>
+        <div className={classes.productListIcons}>
           <GridViewIcon
-            sx={{ color: "#ffb700", font: "22" }}
+            sx={{ color: "#F05941", font: "22" }}
             onClick={() => setGrid(true)}
           />
           <ViewListIcon
             sx={{
-              backgroundColor: "rgba(4, 20, 42, 0.937)",
+              backgroundColor: "#0F0F0F",
               color: "#fff",
               font: "22",
             }}
@@ -52,28 +52,25 @@ const ProductList = () => {
           </span>
         </div>
 
-        <div className="sort">
-          <form>
-            <label>Sort by:</label>
-
-            <select
-              name="category"
-              id="product"
-              value={sort}
-              onChange={(e) => {
-                setSort(e.target.value);
-              }}
-            >
-              <option value="latest">Latest</option>
-              <option value="lowest-price">Lowest Price</option>
-              <option value="highest-price">Highest Price</option>
-              <option value="a-z">A - Z</option>
-              <option value="z-a">Z - A</option>
-            </select>
-          </form>
+        <div className={classes.sort}>
+          <h4>Sort by:</h4>
+          <select
+            name="category"
+            id="product"
+            value={sort}
+            onChange={(e) => {
+              setSort(e.target.value);
+            }}
+          >
+            <option value="latest">Latest</option>
+            <option value="lowest-price">Lowest Price</option>
+            <option value="highest-price">Highest Price</option>
+            <option value="a-z">A - Z</option>
+            <option value="z-a">Z - A</option>
+          </select>
         </div>
       </div>
-      <div className="list-grid">
+      <div className={classes.listGrid}>
         {products.length === 0 ? (
           <p>No product found.</p>
         ) : (

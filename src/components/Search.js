@@ -28,7 +28,8 @@ const Search = (props) => {
       <div className={classes.searchForm}>
         <SearchIcon className={classes.icon} />
         <input
-          placeholder="Search by name"
+          placeholder="Search product"
+          aria-describedby="searchProduct"
           value={props.search}
           onChange={props.onChange}
           type="text"

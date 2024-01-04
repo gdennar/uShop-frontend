@@ -56,3 +56,9 @@
 	height: 100%;
 	background-color: #ffb700;
 }
+@media screen and (max-width: 800px) {
+	
+	.product-filter .filter-category button {
+		height: 3rem;
+	}
+}
