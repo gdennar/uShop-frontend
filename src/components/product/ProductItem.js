@@ -1,5 +1,5 @@
 import React from "react";
-import "./ProductItem.css";
+import classes from "./ProductItem.module.css";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
@@ -23,25 +23,25 @@ const ProductItem = ({ grid, product, id, name, price, imageUrl, desc }) => {
   };
 
   return (
-    <div className={grid ? "grid" : "list"}>
-      <Link to={`/product-details/${id}`} className="prod-link">
-        <div className="img">
+    <div className={`${grid ? classes.grid : classes.list}`}>
+      <Link to={`/product-details/${id}`} className={classes.prodLink}>
+        <div className={classes.img}>
           <img src={imageUrl} alt={name} />
         </div>
       </Link>
-      <div className="prd-content">
-        <div className="details">
+      <div className={classes.prdContent}>
+        <div className={classes.details}>
           <p>{shortenText(name, 20)}</p>
           <p>
             <span>{`$${price.toFixed(2)}`} </span>
-            <span className="wishList">
+            <span className={classes.wishList}>
               <FaRegHeart />
             </span>
           </p>
         </div>
-        {!grid && <p className="desc">{shortenText(desc, 200)}</p>}
+        {!grid && <p className={classes.desc}>{shortenText(desc, 200)}</p>}
         <Button
-          className="button-prd"
+          className={classes.buttonPrd}
           onClick={() => addToCartHandler(product)}
         >
           Add to cart

@@ -1,17 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import GridViewIcon from "@mui/icons-material/GridView";
 import ViewListIcon from "@mui/icons-material/ViewList";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import ProductItem from "./ProductItem";
-import { filterAction } from "../../store/filterSlice";
+import { FaFilter } from "react-icons/fa";
 import Pagination from "../Pagination";
 import classes from "./ProductList.module.css";
+import FilterTab from "../FilterTab";
 
 const ProductList = () => {
   const [grid, setGrid] = useState(true);
-  const [sort, setSort] = useState("latest");
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
   const products = useSelector((state) => state.product.products);
   const filteredProduct = useSelector((state) => state.filter.filteredProduct);
+
+  const toggleNav = () => {
+    setIsFilterOpen(true);
+  };
 
   // Pagination state
   const [currentPage, setcurrentPage] = useState(1);
@@ -24,12 +29,6 @@ const ProductList = () => {
     indexOfFirstProduct,
     indexOfLastProduct
   );
-
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(filterAction.filterBySort({ products, sort }));
-  }, [dispatch, products, sort]);
 
   return (
     <section className={classes.productList} id="products">
@@ -52,22 +51,11 @@ const ProductList = () => {
           </span>
         </div>
 
-        <div className={classes.sort}>
-          <h4>Sort by:</h4>
-          <select
-            name="category"
-            id="product"
-            value={sort}
-            onChange={(e) => {
-              setSort(e.target.value);
-            }}
-          >
-            <option value="latest">Latest</option>
-            <option value="lowest-price">Lowest Price</option>
-            <option value="highest-price">Highest Price</option>
-            <option value="a-z">A - Z</option>
-            <option value="z-a">Z - A</option>
-          </select>
+        <div className={classes.sort} onClick={toggleNav}>
+          <div className={classes.filter}>
+            <FaFilter /> <span>Filter</span>
+          </div>
+          {isFilterOpen ? <FilterTab setIsFilterOpen={setIsFilterOpen} /> : ""}
         </div>
       </div>
       <div className={classes.listGrid}>

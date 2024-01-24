@@ -22,10 +22,6 @@ function Header() {
 
   const navigate = useNavigate();
 
-  useEffect(() => {
-    dispatch(cartAction.calculateCartQuantity());
-  }, [dispatch]);
-
   const fixNavBar = () => {
     if (window.scrollY > 30) {
       setScrollPage(true);
@@ -33,7 +29,17 @@ function Header() {
       setScrollPage(false);
     }
   };
-  window.addEventListener("scroll", fixNavBar);
+
+  useEffect(() => {
+    window.addEventListener("scroll", fixNavBar);
+    return () => {
+      window.removeEventListener("scroll", fixNavBar);
+    };
+  }, []);
+
+  useEffect(() => {
+    dispatch(cartAction.calculateCartQuantity());
+  }, [dispatch]);
 
   return (
     <section

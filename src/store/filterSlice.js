@@ -74,8 +74,8 @@ const filterSlice = createSlice({
     },
     filterByPrice: (state, action) => {
       const { products, price } = action.payload;
-
       let tempProduct = [];
+
       if (price === "0") {
         tempProduct = products;
       } else {
