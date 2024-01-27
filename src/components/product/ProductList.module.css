@@ -1,0 +1,120 @@
+.productList {
+	width: 100%;
+	position: relative;
+
+}
+
+.productTop {
+	display: flex;
+	justify-content: space-between;
+	width: 95%;
+	margin: auto;
+	padding-bottom: 10px;
+		
+}
+
+.productListIcons {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.productListIcons > * {
+	margin-right: 7px;
+	cursor: pointer;
+}
+
+
+.sort  {
+	display: flex;
+    align-items: center;
+}
+
+
+.sort  > h4 {
+	font-size: 1rem;
+	font-weight: 500;
+	margin: 0 5px;
+}
+.sort > select {
+	font-size: 1rem;
+	font-weight: 300;	
+}
+
+
+.sort::before,
+.sort::after {
+  content: '';
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  transition: all .35s ease;
+  opacity: 0;
+}
+
+.sort::before {
+  content: '';
+  right: 0;
+  top: 0;
+  border-top: 3px solid var(--color-hover);
+  border-right: 3px solid var(--color-hover);
+  transform: translate(-100%, 50%);
+}
+
+.sort:after {
+  content: '';
+  left: 0;
+  bottom: 0;
+  border-bottom: 3px solid var(--color-hover);
+  border-left: 3px solid var(--color-hover);
+  transform: translate(100%, -50%)
+}
+
+.sort:hover:before,
+.sort:hover:after{
+  transform: translate(0,0);
+  opacity: 1;
+}
+
+.sort:hover {
+  color: var(--color-hover);
+  cursor: pointer;
+}
+
+.productList .icons span {
+	color: gray;
+	font-weight: 300;
+}
+
+.listGrid {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+@media screen and (max-width: 800px) {
+	.productTop {
+		flex-direction: column;
+		align-items: start;
+		justify-content: center;
+		padding-bottom: 10px;
+		margin: 0 auto;
+	}
+	.search {
+		width: 100%;
+	}
+
+	.productTop > * {
+		margin-bottom: 5px;
+		margin-left: 5px;
+		align-items: start;
+		text-align: start;
+	}
+	.sort > form > label {
+		text-align: start;
+	}
+
+	.product-filter .filter-category button {
+		height: 3rem;
+	}
+}

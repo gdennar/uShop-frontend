@@ -1,0 +1,35 @@
+.bgColor{
+    background-color: var(--color-background);
+    width: 100%;
+    height:25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-font);
+    padding-right: 50px;
+    padding-left: 50px;
+    font-size: 0.8rem;
+}
+.contact, .order{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navText:hover, .navLink:hover, .login:hover{
+    color: var(--color-hover)
+}
+
+.contact p, .order p{
+    margin-right: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+a{
+    text-decoration: none;
+    color: var(--color-font)
+}

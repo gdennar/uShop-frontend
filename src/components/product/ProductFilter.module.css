@@ -1,0 +1,69 @@
+.productFilter h4 {
+	font-weight: 400;
+	font-size: 1rem;
+	padding-right: 15px;
+}
+
+.priceFilter, .sortFilter{
+display: flex;
+align-items: center;
+justify-content: flex-start;
+}
+
+.sortFilter select{
+	width: 75%;
+	border-radius: 5px;
+}
+
+.priceFilter p{
+	padding-right: 10px;
+}
+
+.buttonContainer{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.filterInput{
+	line-height: 2rem;
+	margin-top: 20px;
+
+}
+.filterButton{
+	padding: 7px 20px;
+	cursor: pointer;
+	border-radius: 5px;
+	border: none;
+	background-color: var(--color-font);
+	box-shadow: rgba(0, 0, 0, 0.01) 0px 6px 16px;
+	color: var(--color-hover);
+}
+
+.filterButton:hover {
+  box-shadow: var(--color-font) 0 0px 0.1px;
+  transform: scale(1.05) rotate(-1deg);
+}
+
+.filterSearch{
+	padding: 9px;
+	border-radius: 3px;
+	outline: none;
+	border: 1px solid #7777776a;
+}
+
+@media screen and (max-width: 700px) {
+	.productFilter .filterBrand > select {
+		width: 100%;
+	}
+
+}
+
+
+
+@media screen and (max-width: 800px) {
+	
+	.productFilter .filter-category button {
+		height: 3rem;
+	}
+}
