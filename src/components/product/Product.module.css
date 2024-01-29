@@ -5,7 +5,6 @@
 }
 .filter {
 	width: 20%;
-	/* border: 2px solid var(--dark-blue); */
 	transition: all 0.3s;
 }
 
@@ -25,10 +24,6 @@
 	cursor: pointer;
 	padding-left: 5px;
 }
-
-/* .product-box{
-	padding-top: 1rem;
-} */
 
 @media screen and (max-width: 700px) {
 	.filter {

@@ -6,7 +6,6 @@
 	position: relative;
 	background-color: #f8f7f717;
 	border-radius: 3px;
-	/* box-shadow: 0 0 2px rgba(29, 32, 39, 0.116); */
 	box-shadow: rgba(0,0,0,0.1) 0px 2px 6px;
 }
 
@@ -33,23 +32,12 @@
 .grid:hover .grid img{
 	transform: scale(1.35)
 }
-/* @keyframes slide {
-	0% {
-		visibility: visible;
-		right: 10rem;
-	}
-	100% {
-		visibility: visible;
-		right: 1rem;
-	}
-} */
 
 .prdContent p:nth-child(1) {
 	font-size: 1rem;
 	font-weight: 400;
 	padding: 0 !important;
 	margin: 0 0 20px 0 !important;
-
 }
 
 .prdContent p:nth-child(2) {

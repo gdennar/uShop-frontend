@@ -7,20 +7,20 @@ import checkoutSlice from "./checkoutSlice";
 import orderSlice from "./orderSlice";
 
 const rootReducer = combineReducers({
-	auth: authSlice.reducer,
-	product: productSlice.reducer,
-	filter: filterSlice.reducer,
-	cart: cartSlice.reducer,
-	checkout: checkoutSlice.reducer,
-	orders: orderSlice.reducer,
+  auth: authSlice.reducer,
+  product: productSlice.reducer,
+  filter: filterSlice.reducer,
+  cart: cartSlice.reducer,
+  checkout: checkoutSlice.reducer,
+  orders: orderSlice.reducer,
 });
 
 const store = configureStore({
-	reducer: rootReducer,
-	middleware: (getDefaultMiddleware) =>
-		getDefaultMiddleware({
-			serializableCheck: false,
-		}),
+  reducer: rootReducer,
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: false,
+    }),
 });
 
 export default store;

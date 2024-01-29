@@ -1,7 +1,6 @@
 .productList {
 	width: 100%;
 	position: relative;
-
 }
 
 .productTop {
@@ -9,8 +8,7 @@
 	justify-content: space-between;
 	width: 95%;
 	margin: auto;
-	padding-bottom: 10px;
-		
+	padding-bottom: 10px;	
 }
 
 .productListIcons {
@@ -24,12 +22,10 @@
 	cursor: pointer;
 }
 
-
 .sort  {
 	display: flex;
     align-items: center;
 }
-
 
 .sort  > h4 {
 	font-size: 1rem;
@@ -40,7 +36,6 @@
 	font-size: 1rem;
 	font-weight: 300;	
 }
-
 
 .sort::before,
 .sort::after {

@@ -10,90 +10,90 @@ import "./Contact.css";
 import { toast } from "react-toastify";
 
 const Contact = () => {
-	const form = useRef();
+  const form = useRef();
 
-	const sendEmail = (e) => {
-		e.preventDefault();
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-		emailjs
-			.sendForm(
-				process.env.REACT_APP_EMAILJS_SERVICE_ID,
-				"template_tdsw59u",
-				form.current,
-				"pW08xP7aFPq8ifL3F"
-			)
-			.then(
-				(result) => {
-					toast.success(`${result.text}, Message Sent`);
-				},
-				(error) => {
-					toast.error(error.text);
-				}
-			);
-		e.target.reset();
-	};
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        "template_tdsw59u",
+        form.current,
+        "pW08xP7aFPq8ifL3F"
+      )
+      .then(
+        (result) => {
+          toast.success(`${result.text}, Message Sent`);
+        },
+        (error) => {
+          toast.error(error.text);
+        }
+      );
+    e.target.reset();
+  };
 
-	return (
-		<section>
-			<Container className="contact">
-				<h3>Contact Us</h3>
-				<div className="contact-sections">
-					<div className="section">
-						<form onSubmit={sendEmail} ref={form}>
-							<Card className="card">
-								<label>Name</label>
-								<input
-									type="text"
-									name="user_name"
-									placeholder="Full Name"
-									required
-								/>
-								<label>Email</label>
-								<input
-									type="email"
-									name="user_email"
-									placeholder="Your active email"
-									required
-								/>
-								<label>Subject</label>
-								<input
-									type="text"
-									name="subject"
-									placeholder="Subject"
-									required
-								/>
-								<label>Your Message:</label>
-								<textarea name="message" cols="30" rows="10"></textarea>
-								<Button variant="contained" type="submit">
-									Send Message
-								</Button>
-							</Card>
-						</form>
-					</div>
-					<div className="details">
-						<Card className="card2">
-							<h3>Our Contact Information</h3>
-							<p>Fill the form or contact us via other channels listed below</p>
-							<div className="icons">
-								<span>
-									<PhoneIcon /> <p>+234 803 510 3956</p>
-								</span>
-								<span>
-									<ContactMailIcon /> <p>support@ushop.com</p>
-								</span>
-								<span>
-									<LocationOnIcon /> <p>Lagos, Nigeria</p>
-								</span>
-								<span>
-									<TwitterIcon /> <p>@mycode_journey</p>
-								</span>
-							</div>
-						</Card>
-					</div>
-				</div>
-			</Container>
-		</section>
-	);
+  return (
+    <section>
+      <Container className="contact">
+        <h3>Contact Us</h3>
+        <div className="contact-sections">
+          <div className="section">
+            <form onSubmit={sendEmail} ref={form}>
+              <Card className="card">
+                <label>Name</label>
+                <input
+                  type="text"
+                  name="user_name"
+                  placeholder="Full Name"
+                  required
+                />
+                <label>Email</label>
+                <input
+                  type="email"
+                  name="user_email"
+                  placeholder="Your active email"
+                  required
+                />
+                <label>Subject</label>
+                <input
+                  type="text"
+                  name="subject"
+                  placeholder="Subject"
+                  required
+                />
+                <label>Your Message:</label>
+                <textarea name="message" cols="30" rows="10"></textarea>
+                <Button variant="contained" type="submit">
+                  Send Message
+                </Button>
+              </Card>
+            </form>
+          </div>
+          <div className="details">
+            <Card className="card2">
+              <h3>Our Contact Information</h3>
+              <p>Fill the form or contact us via other channels listed below</p>
+              <div className="icons">
+                <span>
+                  <PhoneIcon /> <p>+234 803 510 3956</p>
+                </span>
+                <span>
+                  <ContactMailIcon /> <p>support@ushop.com</p>
+                </span>
+                <span>
+                  <LocationOnIcon /> <p>Lagos, Nigeria</p>
+                </span>
+                <span>
+                  <TwitterIcon /> <p>@mycode_journey</p>
+                </span>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </Container>
+    </section>
+  );
 };
 
 export default Contact;

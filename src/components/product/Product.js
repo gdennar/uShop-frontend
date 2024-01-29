@@ -5,7 +5,6 @@ import useFetchCollection from "../../customHooks/useFetchCollection";
 import { productAction } from "../../store/productSlice";
 import Loader from "../Loader";
 import classes from "./Product.module.css";
-import ProductFilter from "./ProductFilter";
 import ProductList from "./ProductList";
 import FilterAltIcon from "@mui/icons-material/FilterAlt";
 
@@ -32,15 +31,6 @@ const Product = () => {
       {isLoading && <Loader />}
       <ToastContainer />
       <div className={`container ${classes.product}`}>
-        {/* <aside
-					className={
-						showFilter
-							? `${classes.filter} ${classes.show}`
-							: `${classes.filter}`
-					}
-				>
-					<ProductFilter />
-				</aside> */}
         <div id="products" className={classes.content}>
           <ProductList product={products} />
           <div className={classes.filterIcon} onClick={toggleFilterHandler}>

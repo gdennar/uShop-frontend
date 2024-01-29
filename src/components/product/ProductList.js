@@ -18,11 +18,9 @@ const ProductList = () => {
     setIsFilterOpen(true);
   };
 
-  // Pagination state
   const [currentPage, setcurrentPage] = useState(1);
   const [productPerPage] = useState(9);
 
-  // Get Current Products
   const indexOfLastProduct = currentPage * productPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productPerPage;
   const currentProducts = filteredProduct.slice(
