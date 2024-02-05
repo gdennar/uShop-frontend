@@ -6,7 +6,7 @@ import ContactMailIcon from "@mui/icons-material/ContactMail";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import emailjs from "@emailjs/browser";
-import "./Contact.css";
+import classes from "./Contact.module.css";
 import { toast } from "react-toastify";
 
 const Contact = () => {
@@ -35,12 +35,12 @@ const Contact = () => {
 
   return (
     <section>
-      <Container className="contact">
+      <Container className={classes.contact}>
         <h3>Contact Us</h3>
-        <div className="contact-sections">
-          <div className="section">
+        <div className={classes.contactSection}>
+          <div className={classes.section}>
             <form onSubmit={sendEmail} ref={form}>
-              <Card className="card">
+              <Card className={classes.card}>
                 <label>Name</label>
                 <input
                   type="text"
@@ -70,11 +70,11 @@ const Contact = () => {
               </Card>
             </form>
           </div>
-          <div className="details">
-            <Card className="card2">
+          <div className={classes.details}>
+            <Card className={classes.card2}>
               <h3>Our Contact Information</h3>
               <p>Fill the form or contact us via other channels listed below</p>
-              <div className="icons">
+              <div className={classes.icons}>
                 <span>
                   <PhoneIcon /> <p>+234 803 510 3956</p>
                 </span>

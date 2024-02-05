@@ -1,21 +1,23 @@
 import React, { useState } from "react";
 import GridViewIcon from "@mui/icons-material/GridView";
 import ViewListIcon from "@mui/icons-material/ViewList";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import ProductItem from "./ProductItem";
 import { FaFilter } from "react-icons/fa";
-import Pagination from "../Pagination";
+import Pagination from "../home/Pagination";
 import classes from "./ProductList.module.css";
-import FilterTab from "../FilterTab";
+import FilterTab from "../home/FilterTab";
+import { toggleAction } from "../../store/toggleSlice";
 
 const ProductList = () => {
   const [grid, setGrid] = useState(true);
-  const [isFilterOpen, setIsFilterOpen] = useState(false);
   const products = useSelector((state) => state.product.products);
   const filteredProduct = useSelector((state) => state.filter.filteredProduct);
+  const istoggleOpen = useSelector((state) => state.toggle.isToggle);
+  const dispatch = useDispatch();
 
   const toggleNav = () => {
-    setIsFilterOpen(true);
+    dispatch(toggleAction.toggleOpen({ toggle: true }));
   };
 
   const [currentPage, setcurrentPage] = useState(1);
@@ -53,7 +55,7 @@ const ProductList = () => {
           <div className={classes.filter}>
             <FaFilter /> <span>Filter</span>
           </div>
-          {isFilterOpen ? <FilterTab setIsFilterOpen={setIsFilterOpen} /> : ""}
+          {istoggleOpen ? <FilterTab /> : ""}
         </div>
       </div>
       <div className={classes.listGrid}>

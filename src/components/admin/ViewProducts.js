@@ -2,19 +2,18 @@ import React, { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import { deleteDoc, doc } from "firebase/firestore";
 import "react-toastify/dist/ReactToastify.css";
-import "./ViewProducts.css";
+import classes from "./ViewProducts.module.css";
 import { db, storage } from "../../firebase/config";
-import Loader from "../Loader";
-import Tables from "../Table";
+import Loader from "../home/Loader";
+import Tables from "../home/Table";
 import Notiflix from "notiflix";
 import { deleteObject, ref } from "firebase/storage";
 import { useDispatch, useSelector } from "react-redux";
 import { productAction } from "../../store/productSlice";
 import useFetchCollection from "../../customHooks/useFetchCollection";
-import Search from "../Search";
+import Search from "../home/Search";
 import { filterAction } from "../../store/filterSlice";
-import "./ViewProducts.css";
-import Pagination from "../Pagination";
+import Pagination from "../home/Pagination";
 
 const ViewProducts = () => {
   const [search, setSearch] = useState("");
@@ -82,7 +81,7 @@ const ViewProducts = () => {
 
   return (
     <>
-      <div className="view-products">
+      <div className={classes["view-products"]}>
         {isLoading && <Loader />}
         <ToastContainer />
         <h3>All Products</h3>
@@ -91,7 +90,7 @@ const ViewProducts = () => {
             <b>{filteredProduct.length}</b> products found
           </p>
           <Search
-            className="admin-search"
+            className={classes["admin-search"]}
             value={search}
             onChange={(e) => {
               setSearch(e.target.value);

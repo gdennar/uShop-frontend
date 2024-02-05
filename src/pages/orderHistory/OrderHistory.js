@@ -3,7 +3,7 @@ import useFetchCollection from "../../customHooks/useFetchCollection";
 import "./OrderHistory.css";
 import { orderAction } from "../../store/orderSlice";
 import { useDispatch, useSelector } from "react-redux";
-import Loader from "../../components/Loader";
+import Loader from "../../components/home/Loader";
 import { useNavigate } from "react-router-dom";
 
 const OrderHistory = () => {

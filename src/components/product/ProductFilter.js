@@ -2,12 +2,18 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { filterAction } from "../../store/filterSlice";
 import classes from "./ProductFilter.module.css";
+import { toggleAction } from "../../store/toggleSlice";
 
-const ProductFilter = ({ setIsFilterOpen }) => {
+const ProductFilter = () => {
   const [sort, setSort] = useState("latest");
   const [price, setPrice] = useState("0");
   const products = useSelector((state) => state.product.products);
+
   const dispatch = useDispatch();
+
+  const toggle = () => {
+    dispatch(toggleAction.toggleOpen({ toggle: false }));
+  };
 
   const allPrice = [...new Set(products.map((product) => product.price))];
 
@@ -15,19 +21,17 @@ const ProductFilter = ({ setIsFilterOpen }) => {
     dispatch(filterAction.filterByPrice({ products, price }));
   }, [dispatch, products, price]);
 
-  useEffect(() => {
-    dispatch(filterAction.filterBySort({ products, sort }));
-  }, [dispatch, products, sort]);
-
   const clearFiltersHandler = (e) => {
     e.preventDefault();
     setSort("latest");
     setPrice("0");
+    toggle();
   };
 
   const applyFiltersHandler = (e) => {
     e.preventDefault();
     dispatch(filterAction.filterBySort({ products, sort }));
+    toggle();
   };
 
   return (

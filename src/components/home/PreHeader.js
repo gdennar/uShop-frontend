@@ -4,7 +4,7 @@ import HeadsetMicIcon from "@mui/icons-material/HeadsetMic";
 import { toast } from "react-toastify";
 import LogoutIcon from "@mui/icons-material/Logout";
 import { signOut } from "firebase/auth";
-import { auth } from "../firebase/config";
+import { auth } from "../../firebase/config";
 import { useSelector } from "react-redux";
 import { NavLink, useNavigate } from "react-router-dom";
 

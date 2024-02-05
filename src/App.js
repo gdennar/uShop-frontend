@@ -2,8 +2,8 @@ import { Route, BrowserRouter, Routes } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import SpinnerImg from "../src/assests/spinner.jpg";
 
-const PreHeader = lazy(() => import("./components/PreHeader"));
-const Header = lazy(() => import("./components/Header"));
+const PreHeader = lazy(() => import("./components//home/PreHeader"));
+const Header = lazy(() => import("./components/home/Header"));
 const Categories = lazy(() => import("./components/categories/Categories"));
 const Home = lazy(() => import("./pages/home/Home"));
 const Contact = lazy(() => import("./pages/contact/Contact"));
@@ -25,7 +25,7 @@ const ReviewProducts = lazy(() =>
   import("./components/reviewProducts/ReviewProducts")
 );
 const NotFound = lazy(() => import("./pages/notFound/NotFound"));
-const Footer = lazy(() => import("./components/Footer"));
+const Footer = lazy(() => import("./components/home/Footer"));
 
 function App() {
   return (
@@ -44,14 +44,12 @@ function App() {
         >
           <PreHeader />
           <Header />
-          <Categories />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/reset-password" element={<Reset />} />
-
             <Route
               path="/admin/*"
               element={

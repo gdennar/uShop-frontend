@@ -4,13 +4,17 @@ import { Container } from "@mui/material";
 import classes from "./Header.module.css";
 import "react-toastify/dist/ReactToastify.css";
 import { NavLink, useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import NavDrawer from "./NavDrawer";
-import { AdminLink } from "./adminRoute/AdminRoute";
-import { cartAction } from "../store/CartSlice";
+import { AdminLink } from "../adminRoute/AdminRoute";
+import { cartAction } from "../../store/CartSlice";
+import { FaShoppingCart } from "react-icons/fa";
 
 function Header() {
   const [scrollPage, setScrollPage] = useState(false);
+  const cartTotalQuantity = useSelector(
+    (state) => state.cart.cartTotalQuantity
+  );
 
   const theme = useTheme();
   const isMatch = useMediaQuery(theme.breakpoints.down("md"));
@@ -84,11 +88,16 @@ function Header() {
                 <NavLink to="#about" className={navStyle}>
                   <p className="navText">About us</p>
                 </NavLink>
-                <NavLink to="#blog" className={navStyle}>
-                  <p className="navText">Blog</p>
-                </NavLink>
                 <NavLink to="contact" className={navStyle}>
                   <p className="navText">Contact Us</p>
+                </NavLink>
+                <NavLink to="/cart" className={navStyle}>
+                  <p>
+                    <FaShoppingCart fontSize={20} />
+                    <span className={classes.cartQuantity}>
+                      {cartTotalQuantity}
+                    </span>
+                  </p>
                 </NavLink>
               </>
             )}

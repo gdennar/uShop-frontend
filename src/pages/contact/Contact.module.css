@@ -2,7 +2,7 @@
 	margin-bottom: 7rem;
 }
 
-.contact .contact-sections {
+.contact .contactSection {
 	display: flex;
 }
 .contact .card {
@@ -12,7 +12,7 @@
 
 .contact .card2 {
 	padding: 2rem;
-	background-color: rgb(48, 143, 174);
+	background-color: var(--color-hover);
 	color: #fff;
 }
 .contact .card2 h3,
@@ -71,14 +71,14 @@
 	outline: none;
 }
 
-.contact .contact-sections .details h3 {
+.contact .contactSection .details h3 {
 	font-weight: 300;
 	font-size: 2rem;
 	margin: 0;
 }
 
 @media screen and (max-width: 859px) {
-	.contact .contact-sections {
+	.contact .contactSection{
 		flex-direction: column;
 	}
 

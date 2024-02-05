@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { adminNavData } from "../../data/AdminNavData";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import "./NavBar.css";
+import classes from "./NavBar.module.css";
 import { useSelector } from "react-redux";
 
 const NavBar = () => {
@@ -10,8 +10,8 @@ const NavBar = () => {
   const adminUserName = useSelector((state) => state.auth.userName);
 
   return (
-    <div className="navbarr">
-      <div className="user">
+    <div className={classes.navbarr}>
+      <div className={classes.user}>
         <AccountCircleIcon
           sx={{
             fontSize: "50px",
@@ -28,8 +28,8 @@ const NavBar = () => {
                 className=""
                 onClick={() => setShowNav(!showNav)}
               >
-                <NavLink to={item.path} className="nav-link">
-                  <div className="text">{item.text}</div>
+                <NavLink to={item.path} className={classes["nav-link"]}>
+                  <div className={classes.text}>{item.text}</div>
                 </NavLink>
               </li>
             );

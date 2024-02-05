@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Pagination.css";
+import classes from "./Pagination.module.css";
 
 const Pagination = ({
   currentPage,
@@ -38,10 +38,12 @@ const Pagination = ({
     pageNumbers.push(i);
   }
   return (
-    <ul className="pagination">
+    <ul className={classes.pagination}>
       <li
         onClick={paginatePrevHandler}
-        className={`${currentPage === pageNumbers[0] ? `hidden` : null}`}
+        className={`${currentPage === pageNumbers[0] ? classes.hidden : null} ${
+          classes.next
+        }`}
       >
         Prev
       </li>
@@ -51,7 +53,7 @@ const Pagination = ({
             <li
               key={number}
               onClick={() => paginateHandler(number)}
-              className={`${currentPage === number ? `active` : null}`}
+              className={`${currentPage === number ? classes.active : null}`}
             >
               {number}
             </li>
@@ -62,13 +64,15 @@ const Pagination = ({
       <li
         onClick={paginateNextHandler}
         className={`${
-          currentPage === pageNumbers[pageNumbers.length - 1] ? `hidden` : null
-        }`}
+          currentPage === pageNumbers[pageNumbers.length - 1]
+            ? classes.hidden
+            : null
+        } ${classes.next}`}
       >
         Next
       </li>
       <p>
-        <b className="pagination-page"> {`page ${currentPage}`}</b>
+        <b className={classes.paginationPage}> {`page ${currentPage}`}</b>
         <span>{` of `}</span>
         <b>{`${Math.ceil(totalPages)}`}</b>
       </p>

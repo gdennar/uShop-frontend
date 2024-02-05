@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { ToastContainer } from "react-toastify";
 import useFetchCollection from "../../customHooks/useFetchCollection";
 import { productAction } from "../../store/productSlice";
-import Loader from "../Loader";
+import Loader from "../home/Loader";
 import classes from "./Product.module.css";
 import ProductList from "./ProductList";
 import FilterAltIcon from "@mui/icons-material/FilterAlt";

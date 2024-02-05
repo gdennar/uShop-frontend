@@ -1,7 +1,7 @@
 import SearchIcon from "@mui/icons-material/Search";
 import React, { useEffect, useState } from "react";
 import classes from "./Search.module.css";
-import { filterAction } from "../store/filterSlice";
+import { filterAction } from "../../store/filterSlice";
 import { useDispatch, useSelector } from "react-redux";
 
 const Search = (props) => {

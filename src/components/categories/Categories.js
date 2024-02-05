@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Search from "../Search";
+import Search from "../home/Search";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import classes from "./Categories.module.css";
@@ -8,7 +8,6 @@ import { auth } from "../../firebase/config";
 import { authAction } from "../../store/authSlice";
 import { Container } from "@mui/material";
 import { filterAction } from "../../store/filterSlice";
-import { FaShoppingCart } from "react-icons/fa";
 import { AiOutlineHeart } from "react-icons/ai";
 
 const Categories = () => {
@@ -17,9 +16,6 @@ const Categories = () => {
   const isUserLoggedIn = useSelector((state) => state.auth.isLoggedIn);
 
   const products = useSelector((state) => state.product.products);
-  const cartTotalQuantity = useSelector(
-    (state) => state.cart.cartTotalQuantity
-  );
 
   const dispatch = useDispatch();
 
@@ -81,14 +77,6 @@ const Categories = () => {
               <AiOutlineHeart style={{ color: "#F05941" }} />
               <span>wishlist</span>
             </div>
-            <NavLink to="/cart" className={classes.navLink}>
-              <p>
-                <FaShoppingCart fontSize={19} />
-                <span className={classes.cartQuantity}>
-                  {cartTotalQuantity}
-                </span>
-              </p>
-            </NavLink>
           </div>
         </div>
       </Container>

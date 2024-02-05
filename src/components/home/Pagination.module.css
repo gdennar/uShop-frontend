@@ -1,8 +1,7 @@
 .pagination {
 	list-style: none;
-	margin-top: 1rem;
+	margin-top: 2rem;
 	padding-top: 1rem;
-	border-top: 2px solid #ccc;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -13,7 +12,6 @@
 
 .pagination li {
 	font-size: 1rem;
-	border: 1px solid var(--color-background);
 	min-width: 1.5rem;
 	height: 1.5rem;
 	padding: 3px;
@@ -26,8 +24,9 @@
 }
 .pagination p {
 	margin-left: 1rem;
+	font-style: italic;
 }
-.pagination-page {
+.paginationPage {
 	color: var(--color-hover);
 }
 
@@ -35,7 +34,19 @@
 	color: var(--color-background);
 }
 
+.pagination > .next {
+	border: 1px solid var(--color-hover);
+	color: var(--color-background);
+	padding: 5px;
+}
+
+.pagination > .next:hover {
+	color: var(--color-hover);
+}
+
 .pagination .active {
 	background-color: var(--color-hover);
 	color: var(--color-font);
+	box-shadow: 0 0 5px rgba(40, 28, 16, 0.315) ;
+	padding: 6px;
 }

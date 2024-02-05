@@ -6,7 +6,11 @@
 }
 
 .payment-checkout {
-	margin-bottom: 3rem;
+	margin-bottom: 5rem;
+	text-align: center;
+	display: block;
+	justify-content: center;
+	align-items: flex-start;
 }
 
 .payment-checkout h3 {

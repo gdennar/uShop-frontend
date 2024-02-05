@@ -1,23 +1,21 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-	shippingAddress: {},
-	billingAddress: {},
+  shippingAddress: {},
+  billingAddress: {},
 };
 
 const checkoutSlice = createSlice({
-	name: "checkout",
-	initialState,
-	reducers: {
-		saveShippingAddress: (state, action) => {
-			state.shippingAddress = action.payload;
-			console.log(action.payload);
-		},
-		saveBillingAddress: (state, action) => {
-			state.billingAddress = action.payload;
-			console.log(action.payload);
-		},
-	},
+  name: "checkout",
+  initialState,
+  reducers: {
+    saveShippingAddress: (state, action) => {
+      state.shippingAddress = action.payload;
+    },
+    saveBillingAddress: (state, action) => {
+      state.billingAddress = action.payload;
+    },
+  },
 });
 
 export const checkoutAction = checkoutSlice.actions;
