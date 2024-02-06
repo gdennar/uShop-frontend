@@ -2,8 +2,9 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 80vh;
+	height:100vh;
 	width: 100vw;
+	margin: auto;
 }
 
 .form-card {
@@ -15,6 +16,8 @@
 	max-width: 50%;
 	padding: 0 50px;
 	z-index: 99;
+	height: 80vh;
+	
 }
 
 .form-card h3 {
@@ -34,7 +37,7 @@ form {
 }
 
 .input-field {
-	margin-bottom: 15px;
+	margin-bottom: 10px;
 }
 
 .login-img {
@@ -43,7 +46,7 @@ form {
 
 span {
 	font-weight: 500;
-	color: #ffb700;
+	color: var(--color-hover);
 }
 
 .btn-blue {
@@ -75,5 +78,9 @@ span {
 @media screen and (max-width: 800px) {
 	.login-img {
 		display: none;
+	}
+
+	.form-card {
+		height: 90vh;
 	}
 }

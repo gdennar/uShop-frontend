@@ -9,6 +9,7 @@ import NavDrawer from "./NavDrawer";
 import { AdminLink } from "../adminRoute/AdminRoute";
 import { cartAction } from "../../store/CartSlice";
 import { FaShoppingCart } from "react-icons/fa";
+import { AiOutlineHeart } from "react-icons/ai";
 
 function Header() {
   const [scrollPage, setScrollPage] = useState(false);
@@ -85,11 +86,14 @@ function Header() {
                 <NavLink to="#products" className={navStyle}>
                   <p className="navText">Products</p>
                 </NavLink>
-                <NavLink to="#about" className={navStyle}>
-                  <p className="navText">About us</p>
-                </NavLink>
                 <NavLink to="contact" className={navStyle}>
                   <p className="navText">Contact Us</p>
+                </NavLink>
+                <NavLink
+                  to="/cart"
+                  className={`${navStyle} ${classes.wishList}`}
+                >
+                  <AiOutlineHeart style={{ color: "#F05941" }} />
                 </NavLink>
                 <NavLink to="/cart" className={navStyle}>
                   <p>

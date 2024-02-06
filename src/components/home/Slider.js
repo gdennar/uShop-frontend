@@ -4,7 +4,6 @@ import { FaCircleArrowLeft } from "react-icons/fa6";
 import { sliderData } from "../../data/SliderData";
 import { Link } from "react-router-dom";
 import classes from "./Slider.module.css";
-import PreHeader from "./PreHeader";
 import Categories from "../categories/Categories";
 
 const Slider = () => {
@@ -66,16 +65,9 @@ const Slider = () => {
                 <>
                   <img src={image} alt="Images" />
                   <div className={classes.sliderContentContainer}>
-                    <div
-                      className={
-                        heading === "Gadgets"
-                          ? classes.sliderExcepts
-                          : classes.sliderContent
-                      }
-                    >
+                    <div className={classes.sliderContent}>
                       <h2>{heading}</h2>
                       <p>{desc}</p>
-                      <hr />
 
                       <Link className={classes.sliderbtn} to="/product">
                         Shop Now

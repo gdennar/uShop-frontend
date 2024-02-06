@@ -72,7 +72,7 @@ function Login() {
         </div>
         <div className="form-card">
           <form onSubmit={loginHandler}>
-            <h3 style={{ color: "orangered" }}>Login</h3>
+            <h3 style={{ color: "var(--color-hover)" }}>uShop</h3>
             <div className="form-group">
               <div className="input-field">
                 <TextField

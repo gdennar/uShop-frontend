@@ -44,7 +44,6 @@ const PreHeader = () => {
               <p className={classes.navText}>Track Orders</p>
             </NavLink>
           )}
-          <p>EN</p>
           <p>USD</p>
           {!isUserLoggedIn && (
             <NavLink to="/login" className={classes.login}>

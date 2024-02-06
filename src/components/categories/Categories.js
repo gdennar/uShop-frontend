@@ -8,7 +8,6 @@ import { auth } from "../../firebase/config";
 import { authAction } from "../../store/authSlice";
 import { Container } from "@mui/material";
 import { filterAction } from "../../store/filterSlice";
-import { AiOutlineHeart } from "react-icons/ai";
 
 const Categories = () => {
   const [search, setSearch] = useState("");
@@ -72,11 +71,6 @@ const Categories = () => {
             ) : (
               ""
             )}
-
-            <div className={classes.wishList}>
-              <AiOutlineHeart style={{ color: "#F05941" }} />
-              <span>wishlist</span>
-            </div>
           </div>
         </div>
       </Container>

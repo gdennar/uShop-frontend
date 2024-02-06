@@ -4,7 +4,6 @@ import SpinnerImg from "../src/assests/spinner.jpg";
 
 const PreHeader = lazy(() => import("./components//home/PreHeader"));
 const Header = lazy(() => import("./components/home/Header"));
-const Categories = lazy(() => import("./components/categories/Categories"));
 const Home = lazy(() => import("./pages/home/Home"));
 const Contact = lazy(() => import("./pages/contact/Contact"));
 const Login = lazy(() => import("./pages/auth/Login"));
@@ -28,6 +27,8 @@ const NotFound = lazy(() => import("./pages/notFound/NotFound"));
 const Footer = lazy(() => import("./components/home/Footer"));
 
 function App() {
+  const url = window.location.pathname;
+
   return (
     <>
       <BrowserRouter>
@@ -42,8 +43,8 @@ function App() {
             </div>
           }
         >
-          <PreHeader />
-          <Header />
+          {url !== "/login" ? <PreHeader /> : ""}
+          {url !== "/login" ? <Header /> : ""}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/contact" element={<Contact />} />
@@ -68,7 +69,7 @@ function App() {
             <Route path="/review-product/:id" element={<ReviewProducts />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
-          <Footer />
+          {url !== "/login" ? <Footer /> : ""}
         </Suspense>
       </BrowserRouter>
     </>

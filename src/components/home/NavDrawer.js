@@ -3,7 +3,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import React, { useState } from "react";
 import { sidebarData } from "../../data/SideBarData";
 import { NavLink } from "react-router-dom";
-import "./NavDrawer.css";
+import classes from "./NavDrawer.module.css";
 
 const NavDrawer = () => {
   const [showNav, setShowNav] = useState(false);
@@ -15,7 +15,7 @@ const NavDrawer = () => {
           sx={{
             width: "250px",
             height: "100vh",
-            backgroundColor: "rgba(4, 20, 42, 0.937)",
+            backgroundColor: "var(--color-background)",
           }}
         >
           {sidebarData.map((item) => {
@@ -23,14 +23,14 @@ const NavDrawer = () => {
               <List
                 onClick={() => setShowNav(!showNav)}
                 key={item.id}
-                className="sideNav-list"
+                className={classes["sideNav-list"]}
                 sx={{
                   m: 2,
                 }}
               >
-                <NavLink to={item.path} className="nav-link">
-                  <span className="nav-icon">{item.icon}</span>
-                  <span className="text">{item.text}</span>
+                <NavLink to={item.path} className={classes["nav-link"]}>
+                  <span className={classes["nav-icon"]}>{item.icon}</span>
+                  <span className={classes["text"]}>{item.text}</span>
                 </NavLink>
               </List>
             );
@@ -38,7 +38,7 @@ const NavDrawer = () => {
         </Box>
       </Drawer>
       <IconButton
-        sx={{ color: "white", marginLeft: "auto" }}
+        sx={{ color: "var(--color-background)", marginLeft: "auto" }}
         onClick={() => setShowNav(!showNav)}
       >
         <MenuIcon />
