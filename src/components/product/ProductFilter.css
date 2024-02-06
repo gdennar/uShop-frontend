@@ -17,10 +17,6 @@
 	border-bottom: 1px solid #777;
 }
 
-/* .filter-category h4 {
-	margin-bottom: 0px;
-} */
-
 .product-filter .filter-brand > select {
 	font-size: 1.2rem;
 	font-weight: 300;
@@ -36,14 +32,10 @@
 	.product-filter .filter-brand > select {
 		width: 100%;
 	}
-	/* .category button {
-      width: 100%;
-    } */
 }
 
 .active {
 	position: relative;
-	/* margin-bottom: 2px; */
 	padding-left: 1rem;
 }
 

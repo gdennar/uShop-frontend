@@ -1,0 +1,91 @@
+//from product filter
+{/* <aside
+	className={
+		showFilter
+		? `${classes.filter} ${classes.show}`
+		: `${classes.filter}`
+	}
+>
+<ProductFilter />
+</aside> */}
+
+/* .search {
+	margin: 0;
+	position: relative;
+	flex: 1;
+}
+.icon {
+	position: absolute;
+	top: 50%;
+	left: 2.5rem;
+	transform: translateY(-50%);
+}
+
+.search-input {
+	display: block;
+	font-size: 0.9rem;
+	padding: 0.5rem;
+	padding-left: 2rem;
+	margin: 0 auto;
+	width: 70%;
+	border: 1px solid #777;
+	border-radius: 3px;
+	outline: none;
+} */
+
+//from checkout
+	//"http://localhost:4242/create-payment-intent"
+	// https://ushop-api.onrender.com/create-payment-intent"
+
+
+//from productslice
+  		// getPriceRange: (state, action) => {
+		// 	const { product } = action.payload;
+		// 	const arr = [];
+		// 	product.map((prod) => {
+		// 		const price = prod.price;
+		// 		return arr.push(price);
+		// 	});
+		// 	state.minPrice = Math.min(...arr);
+		// 	state.maxPrice = Math.max(...arr);
+		// },
+
+
+        // if (process.env.NODE_ENV === "production") {
+// 	app.use(express.static("build"));
+// 	app.get("*", (req, res) => {
+// 		res.sendFile(path.resolve(__dirname, "build", "index.html"));
+// 	});
+// }
+
+
+//app.use(express.static("public"));
+
+		// receipt_email: userEmail
+
+          {/* <div className={classes.filterIcon} onClick={toggleFilterHandler}>
+            <FilterAltIcon sx={{ color: "#ffb700" }} />
+            <p>
+              <b>{showFilter ? "Hide Filter" : "Show Filter"}</b>
+            </p>
+          </div> */}
+
+            const toggleFilterHandler = () => {
+    setShowFilter(!showFilter);
+  };
+
+    const [showFilter, setShowFilter] = useState(false);
+    	//"http://localhost:4242/create-payment-intent"
+	// https://ushop-api.onrender.com/create-payment-intent"
+
+    
+    		// getPriceRange: (state, action) => {
+		// 	const { product } = action.payload;
+		// 	const arr = [];
+		// 	product.map((prod) => {
+		// 		const price = prod.price;
+		// 		return arr.push(price);
+		// 	});
+		// 	state.minPrice = Math.min(...arr);
+		// 	state.maxPrice = Math.max(...arr);
+		// },
