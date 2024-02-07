@@ -7,14 +7,7 @@ function Footer() {
     <section className={classes.navBar}>
       <Toolbar>
         <Typography
-          sx={{
-            mr: 2,
-            fontFamily: "monospace",
-            letterSpacing: ".1rem",
-            color: "white",
-            textDecoration: "none",
-            fontWeight: "12px",
-          }}
+          className={classes.navBarTypography} // Add the class here
         >
           &copy;{`${"Copyright Golden "}${new Date().getFullYear()}`}
         </Typography>

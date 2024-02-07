@@ -1,7 +1,6 @@
-import { Route, BrowserRouter, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import SpinnerImg from "../src/assests/spinner.jpg";
-import Login from "./pages/auth/Login";
 
 const PreHeader = lazy(() => import("./components//home/PreHeader"));
 const Header = lazy(() => import("./components/home/Header"));
@@ -28,50 +27,50 @@ const NotFound = lazy(() => import("./pages/notFound/NotFound"));
 const Footer = lazy(() => import("./components/home/Footer"));
 
 function App() {
-  const url = window.location.pathname;
+  const location = useLocation();
+
+  const isLoginPage = location.pathname === "/login";
+
   return (
     <>
-      <BrowserRouter>
-        <Suspense
-          fallback={
-            <div className="lazy-loading">
-              <img
-                src={SpinnerImg}
-                alt="Loading..."
-                style={{ width: "50px" }}
-              />
-            </div>
-          }
-        >
-          {url !== "/login" ? <PreHeader /> : ""}
-          {url !== "/login" ? <Header /> : ""}
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/reset-password" element={<Reset />} />
-            <Route
-              path="/admin/*"
-              element={
-                <AdminRoute>
-                  <Admin />
-                </AdminRoute>
-              }
-            />
-            <Route path="/product-details/:id" element={<ProductDetails />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/checkout-details" element={<CheckoutDetails />} />
-            <Route path="/checkout" element={<Checkout />} />
-            <Route path="/checkout-success" element={<CheckoutSuccess />} />
-            <Route path="/order-history" element={<OrderHistory />} />
-            <Route path="/order-details/:id" element={<OrderDetails />} />
-            <Route path="/review-product/:id" element={<ReviewProducts />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-          {url !== "/login" ? <Footer /> : ""}
-        </Suspense>
-      </BrowserRouter>
+      <Suspense
+        fallback={
+          <div className="lazy-loading">
+            <img src={SpinnerImg} alt="Loading..." style={{ width: "50px" }} />
+          </div>
+        }
+      >
+        {isLoginPage ? "" : <PreHeader />}
+        {isLoginPage ? "" : <Header />}
+
+        <Routes>
+          <Route path="/login" element={<Login />} />
+
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+
+          <Route path="/register" element={<Register />} />
+          <Route path="/reset-password" element={<Reset />} />
+          <Route
+            path="/admin/*"
+            element={
+              <AdminRoute>
+                <Admin />
+              </AdminRoute>
+            }
+          />
+          <Route path="/product-details/:id" element={<ProductDetails />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout-details" element={<CheckoutDetails />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/checkout-success" element={<CheckoutSuccess />} />
+          <Route path="/order-history" element={<OrderHistory />} />
+          <Route path="/order-details/:id" element={<OrderDetails />} />
+          <Route path="/review-product/:id" element={<ReviewProducts />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+        {isLoginPage ? "" : <Footer />}
+      </Suspense>
     </>
   );
 }
