@@ -1,12 +1,12 @@
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import SpinnerImg from "../src/assests/spinner.jpg";
+import Login from "./pages/auth/Login";
 
 const PreHeader = lazy(() => import("./components//home/PreHeader"));
 const Header = lazy(() => import("./components/home/Header"));
 const Home = lazy(() => import("./pages/home/Home"));
 const Contact = lazy(() => import("./pages/contact/Contact"));
-const Login = lazy(() => import("./pages/auth/Login"));
 const Register = lazy(() => import("./pages/auth/Register"));
 const Reset = lazy(() => import("./pages/auth/Reset"));
 const AdminRoute = lazy(() => import("./components/adminRoute/AdminRoute"));
@@ -28,7 +28,6 @@ const Footer = lazy(() => import("./components/home/Footer"));
 
 function App() {
   const url = window.location.pathname;
-
   return (
     <>
       <BrowserRouter>

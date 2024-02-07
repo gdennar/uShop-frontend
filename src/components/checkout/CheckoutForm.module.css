@@ -22,7 +22,7 @@
 	width: 100%;
 	display: flex;
 	align-items: flex-start;
-	justify-content: center;
+	justify-content: space-around;
 }
 
 label {
@@ -42,6 +42,10 @@ label {
 	border: 1px solid #777;
 	border-radius: 3px;
 	outline: none;
+}
+
+.pay{
+	margin-bottom: 30px;
 }
 
 @media screen and (max-width: 700px) {

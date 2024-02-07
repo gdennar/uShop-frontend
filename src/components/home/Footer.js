@@ -1,5 +1,5 @@
 import * as React from "react";
-import { AppBar, Typography, Toolbar } from "@mui/material";
+import { Typography, Toolbar } from "@mui/material";
 import classes from "./Footer.module.css";
 
 function Footer() {
