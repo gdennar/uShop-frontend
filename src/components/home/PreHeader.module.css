@@ -33,3 +33,10 @@ a{
     text-decoration: none;
     color: var(--color-font)
 }
+
+@media (max-width: 425px) {
+    .bgColor {
+     display: none;
+    }
+  }
+  

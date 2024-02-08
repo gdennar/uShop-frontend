@@ -28,7 +28,6 @@ justify-content: flex-start;
 .filterInput{
 	line-height: 2rem;
 	margin-top: 20px;
-
 }
 .filterButton{
 	padding: 7px 20px;
@@ -66,3 +65,15 @@ justify-content: flex-start;
 		height: 3rem;
 	}
 }
+
+@media (max-width: 425px) {
+	.filterInput{
+		margin-top: 8px;
+	}
+
+	.sortFilter select{
+		width: 60%;
+	}
+	
+  }
+  

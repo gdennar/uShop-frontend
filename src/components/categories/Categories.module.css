@@ -6,7 +6,7 @@
   
   .searchContainer {
     align-items: center;
-    width: 60%; 
+    min-width: 60%; 
     margin-top: 20px;
   }
   
@@ -17,9 +17,10 @@
  }
 
   .navLink {
-    margin: 0 20px;
+    margin: auto;
     text-decoration: none;
-    color: #333; 
+    color: #333;
+    margin-top: 20px;
   }
   
  .cartQuantity {
@@ -44,4 +45,23 @@
 .css-1ekb41w{
   padding: 0 !important;
 }
+}
+
+@media (max-width: 425px) {
+  .searchContainer {
+    width: 100%;
+  }
+
+  .categoryContainer {
+    display: block;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+ 
+  }
+
+  .navLink {
+    margin-top: 0px;
+  }
+
 }
