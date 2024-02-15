@@ -88,3 +88,19 @@ span {
 	}
 }
 
+@media screen and (max-width: 450px) {
+
+	.form-card {
+		max-height: 50%;
+	}
+}
+
+
+@media screen and (min-width: 200px) and (max-width: 380px) {
+
+	.form-card {
+		max-height: 70%;
+	}
+}
+
+
