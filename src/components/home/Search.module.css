@@ -39,4 +39,18 @@
     color: black;
 };
 
+@media screen and (max-width: 800px) {
+	.icon {
+	  right: 1rem; 
+	  top: 50%; 
+	  transform: translateY(-50%);
+	}
+  
+	.categoryDropdown {
+	  right: 1rem;
+	  top: 100%; 
+	  width: 120px; 
+	}
+  }
+  
 

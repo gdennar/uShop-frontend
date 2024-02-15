@@ -108,7 +108,7 @@ function Login() {
             >
               Login with Google
             </Button>
-            <p>
+            <p style={{ fontSize: "12px" }}>
               Don't have an account?{" "}
               <span>
                 <Link to="/register">Register</Link>

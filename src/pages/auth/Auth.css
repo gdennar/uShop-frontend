@@ -9,19 +9,21 @@
 
 .form-card {
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	box-shadow: 0 0 3px rgba(16, 24, 40, 0.25);
 	border-radius: 10px;
-	max-width: 50%;
-	padding: 0 50px;
+	max-width: 90%;
+	padding: 0 20px;
 	z-index: 99;
-	height: 80vh;
+	height: auto;
 	
 }
 
 .form-card h3 {
-	font-size: 2.5rem;
+	font-size: 2rem;
+	margin-bottom: 20px;
 	animation: slide-up 0.5s ease;
 }
 form {
@@ -29,7 +31,7 @@ form {
 }
 
 .form-group {
-	margin-bottom: 15px;
+	margin-bottom: 20px;
 }
 
 #outlined-required {
@@ -37,7 +39,7 @@ form {
 }
 
 .input-field {
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 }
 
 .login-img {
@@ -55,6 +57,7 @@ span {
 
 .auth-page {
 	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
 }
 
@@ -81,6 +84,7 @@ span {
 	}
 
 	.form-card {
-		height: 90vh;
+		height: 100%;
 	}
 }
+
